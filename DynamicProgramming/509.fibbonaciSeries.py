@@ -20,10 +20,10 @@ class Solution(object):
     def fib(self, n):
         if n==0 or n==1:
             return n
-        prev=1
+        prev=1      #we are just storing the last 2 values of fib(n) to calculate the next value of fib(n)
         prev_1=0
         for i in range(2,n+1):
             ans=prev+prev_1
-            prev_1=prev
-            prev=ans
+            prev_1=prev    #updating the previous value to the last calculated value of fib(n)
+            prev=ans           #updating the previous value to the last calculated value of fib(n)
         return ans
