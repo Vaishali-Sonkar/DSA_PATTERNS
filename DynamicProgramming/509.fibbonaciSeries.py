@@ -10,4 +10,20 @@ class Solution(object):
     def fib(self, n):
         self.dp=[-1]*(n+1)  #creating array with -1 to save the values of fib(n) for n=0 to n
         return self.func(n)
-        
+
+
+
+
+
+#the TABULATION APPROACH -> Space Complexity o(1) ,lesser time no extra space used
+class Solution(object):
+    def fib(self, n):
+        if n==0 or n==1:
+            return n
+        prev=1
+        prev_1=0
+        for i in range(2,n+1):
+            ans=prev+prev_1
+            prev_1=prev
+            prev=ans
+        return ans
