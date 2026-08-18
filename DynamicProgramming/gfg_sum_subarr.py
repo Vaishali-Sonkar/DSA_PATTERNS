@@ -38,7 +38,7 @@ class Solution:
 
         dp[n][0]=1
         for i in range(n-1,-1,-1):
-            for j in range(sum + 1):
+            for j in range(sum + 1): 
                 if arr[i]>j:
                     dp[i][j]=dp[i+1][j]
                 else:
